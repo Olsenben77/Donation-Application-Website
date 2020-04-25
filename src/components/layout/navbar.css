@@ -1,0 +1,9 @@
+body {
+    font-family: "montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 800;
+}
+
+#title {
+    color: #28a745;
+    font-weight: 800;
+}

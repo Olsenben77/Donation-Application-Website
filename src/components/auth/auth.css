@@ -1,0 +1,44 @@
+#okta-sign-in .auth-org-logo {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#okta-sign-in .auth-header {
+    padding: 0;
+}
+
+#okta-sign-in.no-beacon .auth-header {
+    padding-bottom: 0;
+}
+
+#okta-sign-in.auth-container .button {
+    background-color: #28a745;
+}
+
+#okta-sign-in.auth-container .button-primary {
+    background-color: #28a745;
+    background: linear-gradient(#28a745, #28a745);
+    border-bottom-color: #28a745;
+    border-color: #28a745;
+}
+
+#okta-sign-in.auth-container h2, #okta-sign-in.auth-container h3 {
+    color: white;
+}
+
+#okta-sign-in.auth-container .button-primary:hover, #okta-sign-in.auth-container .button-primary:focus, #okta-sign-in.auth-container .button-primary:active, #okta-sign-in.auth-container .button-primary:focus {
+    background-color: #28a745;
+    background-image: linear-gradient(#28a745, black);
+    border-color: #28a745;
+    border-bottom-color: #28a745;
+}
+
+#okta-sign-in.auth-container .okta-form-input-field {
+    border-color: #28a745;
+}
+
+#okta-sign-in.auth-container .okta-form-input-field.focused-input {
+    border-color: #28a745;
+}

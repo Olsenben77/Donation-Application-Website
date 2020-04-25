@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { withAuth } from '@okta/okta-react';
+import './style.css';
 
 export default withAuth(
   class Home extends Component {
@@ -43,27 +44,28 @@ export default withAuth(
       const mainContent = this.state.authenticated ? (
         <div>
           <p className="lead">
-            You have entered the inventory portal,{' '}
+            You have entered the member portal,{' '}
             <Link to="/staff">click here</Link>
           </p>
-          <button className="btn btn-primary btn-lg" onClick={this.logout}>
+          <button className="btn btn-success btn-lg" onClick={this.logout}>
             Logout
           </button>
         </div>
       ) : (
           <div>
             <p className="lead">
-              To create a new user or to change a password, please reach out to your Manager.
-          </p>
-            <button className="btn btn-primary btn-lg" onClick={this.login}>
-              Login
+              To request a new User account, please submit the following information below.
+            </p>
+            <p className="lead">If you are an active User please Sign in.</p>
+            <button className="btn btn-success btn-lg" onClick={this.login}>
+              Sign in
           </button>
           </div>
         );
 
       return (
         <div className="jumbotron">
-          <h1 className="display-4">Sneaker Inventory</h1>
+          <h1 className="display-4">DONATIONALLY</h1>
           {mainContent}
         </div>
       );
