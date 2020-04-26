@@ -54,7 +54,7 @@ export default withAuth(
       ) : (
           <div>
             <p className="lead">
-              To request a new User account, please submit the following information below.
+              To create a new User Account please <a href=" https://dev-240113.okta.com/" target="_blank"> click here! </a>
             </p>
             <p className="lead">If you are an active User please Sign in.</p>
             <button className="btn btn-success btn-lg" onClick={this.login}>

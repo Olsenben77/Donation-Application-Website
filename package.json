@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@okta/okta-react": "^1.4.1",
-    "@okta/okta-signin-widget": "^2.21.0",
+    "@okta/okta-signin-widget": "^3.9.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-router-dom": "^4.3.1",
