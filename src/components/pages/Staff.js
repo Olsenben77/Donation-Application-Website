@@ -21,7 +21,7 @@ class Staff extends Component {
       <div>
         <h1>Welcome {currentUserName}</h1>
         <p>Email: {currentUserEmail}</p>
-        <p>You have reached the authorized staff area of the portal</p>
+        <p>You have reached the member portal of Donationally.com</p>
       </div>
     );
   }
