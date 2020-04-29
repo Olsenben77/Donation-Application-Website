@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#317EFB" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="indexchartstyle.css" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <title>Donation Tracker</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <form>
+
+            <label for="t-name">Donation Name:</label>
+            <input type="text" id="t-name" placeholder="Name" />
+
+            <div class="transaction-buttons">
+                <span class="input-group-addon">$</span>
+                <input id="open_dollar_amount" class="form-control" name="open_dollar_amount" type="number" value>
+
+                <button id="give-now"><i class="widget-button btn btn-primary" data-produc-id="531962">Give
+                        Now</button>
+
+            </div>
+
+        </form>
+
+        <div class="transactions">
+            <table>
+                <thead>
+                    <th>Donation</th>
+                    <th>Amount</th>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+
+        <canvas id="my-chart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="/db.js"></script>
+    <script src="/index.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () =>
+                navigator.serviceWorker
+                    .register('service-worker.js')
+                    .then(reg => console.log('We found your service worker file!', reg))
+            );
+        }
+    </script>
+</body>
+
+</html>
