@@ -1,74 +1,49 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { withAuth } from '@okta/okta-react';
-import './style.css';
+import React from 'react';
+import Image from './image/logo.PNG';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default withAuth(
-  class Home extends Component {
-    state = { authenticated: null };
+function Home() {
 
-    constructor(props) {
-      super(props);
-      this.state = { authenticated: null };
-      this.checkAuthentication = this.checkAuthentication.bind(this);
-      this.login = this.login.bind(this);
-      this.logout = this.logout.bind(this);
-    }
+  return (
 
-    checkAuthentication = async () => {
-      const authenticated = await this.props.auth.isAuthenticated();
-      if (authenticated !== this.state.authenticated) {
-        this.setState({ authenticated });
-      }
-    };
 
-    async componentDidMount() {
-      this.checkAuthentication();
-    }
+    <div>
+      <h2>TEST MAIN PAGE</h2>
+      <p>
+        What is Lorem Ipsum?
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+        </p>
+      <button type="button" class="btn btn-primary">Primary</button>
+      <button type="button" class="btn btn-secondary">Secondary</button>
+      <button type="button" class="btn btn-success">Success</button>
+      <button type="button" class="btn btn-danger">Danger</button>
+      <button type="button" class="btn btn-warning">Warning</button>
+      <button type="button" class="btn btn-info">Info</button>
+      <button type="button" class="btn btn-light">Light</button>
+      <button type="button" class="btn btn-dark">Dark</button>
 
-    async componentDidUpdate() {
-      this.checkAuthentication();
-    }
+      <button type="button" class="btn btn-link">Link</button>
+      <p>
+        Where does it come from?
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
 
-    login = async () => {
-      this.props.auth.login('/');
-    };
+        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+        </p>
 
-    logout = async () => {
-      this.props.auth.logout('/');
-    };
-
-    render() {
-      if (this.state.authenticated === null) return null;
-
-      const mainContent = this.state.authenticated ? (
-        <div>
-          <p className="lead">
-            You have entered the member portal,{' '}
-            <Link to="/staff">click here</Link>
-          </p>
-          <button className="btn btn-success btn-lg" onClick={this.logout}>
-            Logout
-          </button>
+      <div class="card">
+        <img class="card-img-top" src={Image} alt="Card image cap"></img>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="/" class="btn btn-primary">Go somewhere</a>
         </div>
-      ) : (
-          <div>
-            <p className="lead">
-              To create a new User Account please <a href=" https://dev-240113.okta.com/" target="_blank"> click here! </a>
-            </p>
-            <p className="lead">If you are an active User please Sign in.</p>
-            <button className="btn btn-success btn-lg" onClick={this.login}>
-              Sign in
-          </button>
-          </div>
-        );
+      </div>
 
-      return (
-        <div className="jumbotron">
-          <h1 className="display-4">DONATIONALLY</h1>
-          {mainContent}
-        </div>
-      );
-    }
-  }
-);
+
+    </div>
+
+  );
+}
+
+export default Home;
+
