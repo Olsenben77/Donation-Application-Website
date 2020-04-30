@@ -1,74 +1,69 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { withAuth } from '@okta/okta-react';
-import './style.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.css";
+import { Link } from "react-router-dom";
+import "./Home.css";
 
-export default withAuth(
-  class Home extends Component {
-    state = { authenticated: null };
+function Home() {
+  return (
+    <nav className="navbar navbar-expand-lg  navbar-light  bg-success">
+      <div className="wrapper">
+        <a className="navbar-brand" href="#" style={{ color: "white" }}>
+          Donationally
+        </a>
+      </div>
+      {/* <button
+        className="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      > */}
+      {/* <span className="navbar-toggler-icon"></span>
+      </button> */}
 
-    constructor(props) {
-      super(props);
-      this.state = { authenticated: null };
-      this.checkAuthentication = this.checkAuthentication.bind(this);
-      this.login = this.login.bind(this);
-      this.logout = this.logout.bind(this);
-    }
+      {/* <div className="collapse navbar-collapse" id="navbarSupportedContent"> */}
+      <ul className="navbar-nav mr-auto">
+        <a className="nav-link" href="#">
+          <li className="nav-item" style={{ textAlign: "center" }}>
+            Donate
+          </li>
+        </a>
 
-    checkAuthentication = async () => {
-      const authenticated = await this.props.auth.isAuthenticated();
-      if (authenticated !== this.state.authenticated) {
-        this.setState({ authenticated });
-      }
-    };
+        <a className="nav-link" href="#" style={{ color: "white" }}>
+          <li className="nav-item">Map</li>
+        </a>
+        <a className="nav-link" href="#" style={{ color: "white" }}>
+          <li className="nav-item">Blog/Chat</li>
+        </a>
 
-    async componentDidMount() {
-      this.checkAuthentication();
-    }
+        {/* </div> */}
+        <span className="nav-right">
+          <a
+            className="nav-link"
+            href="#"
+            style={{ color: "white", margin: "5px" }}
+          >
+            <li className="nav-item" style={{ listStyle: "none" }}>
+              <i className="fas fa-home" style={{ padding: "5px" }}></i>
+              Portal (sign in)
+            </li>
+          </a>
+          <a
+            className="nav-link"
+            href="#"
+            style={{ color: "white", margin: "5px" }}
+          >
+            <li className="nav-item" style={{ listStyle: "none" }}>
+              <i className="fas fa-user-alt" style={{ padding: "5px" }}></i>
+              About Us
+            </li>
+          </a>
+        </span>
+      </ul>
+    </nav>
+  );
+}
 
-    async componentDidUpdate() {
-      this.checkAuthentication();
-    }
-
-    login = async () => {
-      this.props.auth.login('/');
-    };
-
-    logout = async () => {
-      this.props.auth.logout('/');
-    };
-
-    render() {
-      if (this.state.authenticated === null) return null;
-
-      const mainContent = this.state.authenticated ? (
-        <div>
-          <p className="lead">
-            You have entered the member portal,{' '}
-            <Link to="/staff">click here</Link>
-          </p>
-          <button className="btn btn-success btn-lg" onClick={this.logout}>
-            Logout
-          </button>
-        </div>
-      ) : (
-          <div>
-            <p className="lead">
-              To create a new User Account please <a href=" https://dev-240113.okta.com/" target="_blank"> click here! </a>
-            </p>
-            <p className="lead">If you are an active User please Sign in.</p>
-            <button className="btn btn-success btn-lg" onClick={this.login}>
-              Sign in
-          </button>
-          </div>
-        );
-
-      return (
-        <div className="jumbotron">
-          <h1 className="display-4">DONATIONALLY</h1>
-          {mainContent}
-        </div>
-      );
-    }
-  }
-);
+export default Home;

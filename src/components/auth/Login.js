@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
-import SignInWidget from './SignInWidget';
-import { withAuth } from '@okta/okta-react';
+import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
+import SignInWidget from "./SignInWidget";
+import { withAuth } from "@okta/okta-react";
 
 export default withAuth(
   class Login extends Component {
@@ -10,7 +10,7 @@ export default withAuth(
       this.onSuccess = this.onSuccess.bind(this);
       this.onError = this.onError.bind(this);
       this.state = {
-        authenticated: null
+        authenticated: null,
       };
       this.checkAuthentication();
     }
@@ -26,27 +26,27 @@ export default withAuth(
       this.checkAuthentication();
     }
 
-    onSuccess = res => {
+    onSuccess = (res) => {
       return this.props.auth.redirect({
-        sessionToken: res.session.token
+        sessionToken: res.session.token,
       });
     };
 
-    onError = err => {
-      console.log('error logging in', err);
+    onError = (err) => {
+      console.log("error logging in", err);
     };
 
     render() {
       if (this.state.authenticated === null) return null;
       return this.state.authenticated ? (
-        <Redirect to={{ pathname: '/' }} />
+        <Redirect to={{ pathname: "/Portal" }} />
       ) : (
-          <SignInWidget
-            baseUrl={this.props.baseUrl}
-            onSuccess={this.onSuccess}
-            onError={this.onError}
-          />
-        );
+        <SignInWidget
+          baseUrl={this.props.baseUrl}
+          onSuccess={this.onSuccess}
+          onError={this.onError}
+        />
+      );
     }
   }
 );

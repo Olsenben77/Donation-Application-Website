@@ -1,0 +1,33 @@
+.wrapper {
+  padding-right: 100px;
+  animation: pulse 1s infinite;
+}
+
+#pulse {
+  width: 100px;
+  height: 45px;
+}
+
+#title:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+  animation: pulsecolor 1s infinite;
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.1);
+  }
+}
+a:hover {
+  color: #002145 !important;
+  transition: all 3s !important;
+  animation: pulse 1s infinite;
+}
+
+.nav-right {
+  width: 35%;
+  position: relative;
+  right: 10px;
+}
