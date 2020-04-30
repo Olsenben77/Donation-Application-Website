@@ -1,8 +1,9 @@
-.jumbotron {
+#jumbo {
     background-color: black;
     background-size: inherit;
     background-repeat: no-repeat;
     color: white;
+    width: 100%;
 }
 
 .card {

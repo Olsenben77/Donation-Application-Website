@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { withAuth } from '@okta/okta-react';
+import { Jumbotron, Container } from 'react-bootstrap';
 import './style.css';
 
 export default withAuth(
@@ -64,10 +65,16 @@ export default withAuth(
         );
 
       return (
-        <div className="jumbotron">
-          <h1 className="display-4">DONATIONALLY</h1>
-          {mainContent}
-        </div>
+
+
+        <Jumbotron fluid>
+          <Container fluid>
+            <h1>DONATIONALLY</h1>
+            <p>
+              {mainContent}
+            </p>
+          </Container>
+        </Jumbotron>
       );
     }
   }
