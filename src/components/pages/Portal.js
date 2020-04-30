@@ -67,8 +67,8 @@ export default withAuth(
       return (
 
 
-        <Jumbotron fluid id="jumbo">
-          <Container>
+        <Jumbotron fluid>
+          <Container fluid>
             <h1>DONATIONALLY</h1>
             <p>
               {mainContent}
