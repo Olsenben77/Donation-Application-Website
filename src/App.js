@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Security, SecureRoute, ImplicitCallback } from '@okta/okta-react';
+import Hero from './components/layout/Hero';
 import Navbar2 from './components/layout/Navbar2';
-import Header from './components/layout/Header';
 import Home from './components/pages/Home';
 import Portal from './components/pages/Portal';
 import Staff from './components/pages/Staff';
@@ -28,7 +28,8 @@ class App extends Component {
 
         >
           <div className="App">
-            <Header />
+
+            <Hero />
             <Navbar2 />
             <Layout>
               <div className="container">
