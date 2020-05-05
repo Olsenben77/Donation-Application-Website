@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+  </head>
+  <body>
+    <h3>Donationally Map</h3>
+    <!--The div element for the map -->
+    <div id ="fakebox">
+      <input id= "search">
+    </div>
+  
+  
+    <div id="map"></div>
+    
+    <div id="listing">
+      <table id="resultsTable">
+        <tbody id="results"></tbody>
+      </table>
+    </div>
+    
+    <script src="./map.js">
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfJJSe1Ljvqkxb4jEPUSiEiZlX0E6C_jU&libraries=places&callback=initMap">
+    </script>
+  </body>
+</html>
