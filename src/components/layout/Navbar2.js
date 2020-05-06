@@ -1,38 +1,53 @@
-import React, { Component } from 'react';
-import { Navbar, Nav, NavDropdown, Form, Button, FormControl } from 'react-bootstrap';
+import React, { Component } from "react";
+import { Navbar, Nav, NavDropdown, Form } from "react-bootstrap";
+import "./navbar.css";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class Navbar2 extends Component {
   render() {
     return (
       <div className="navbar2-space">
-        <Navbar bg="light" expand="lg">
-          <Navbar.Brand href="/">DONATIONALLY</Navbar.Brand>
+        <Navbar bg="dark" expand="lg">
+          <Navbar.Brand href="/" style={{ color: "white" }}>
+            DONATIONALLY
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/">About</Nav.Link>
-              <NavDropdown title="About" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+              <Nav.Link href="/" style={{ color: "white" }}>
+                About Us
+              </Nav.Link>
+              <Nav.Link href="/" style={{ color: "white" }}>
+                Donate
+              </Nav.Link>
+              <NavDropdown
+                title="Charity Map"
+                id="basic-nav-dropdown"
+                style={{ color: "white" }}
+              >
+                <NavDropdown.Item href="#action/3.1" style={{ color: "grey" }}>
+                  Charity Search
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.1" style={{ color: "grey" }}>
+                  Charities Near Me
+                </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="/portal">Sign Up</Nav.Link>
-              <Nav.Link href="/staff">Members</Nav.Link>
-              <Nav.Link href="/">Contact Us</Nav.Link>
             </Nav>
             <Form inline>
-              <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-              <Button variant="outline-success">Charity Seach</Button>
+              <Nav.Link href="/portal" style={{ color: "white" }}>
+                Contact us
+              </Nav.Link>
+              <Nav.Link href="/staff" style={{ color: "white" }}>
+                Members
+              </Nav.Link>
+              <Nav.Link href="/" style={{ color: "white" }}>
+                Portal (Sign-In)
+              </Nav.Link>
             </Form>
           </Navbar.Collapse>
         </Navbar>
       </div>
-
     );
   }
 }

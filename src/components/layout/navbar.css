@@ -1,45 +1,44 @@
 body {
-    font-family: "raleway", Arial, Helvetica, sans-serif;
+  font-family: "raleway", Arial, Helvetica, sans-serif;
 }
 
 #title {
-    color: #28a745;
-    font-weight: bold;
+  color: #28a745;
+  font-weight: bold;
 }
 
 #head {
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-.navbar2-space {
-    margin-bottom: 20px;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 #header-space {
-    margin-bottom: 0;
-    padding-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .hero {
-    height: 400px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
 .hero::after {
-    content: '';
-    display: block;
-    opacity: 0.4;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  content: "";
+  display: block;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .hero * {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgb(245, 212, 212) !important;
 }
