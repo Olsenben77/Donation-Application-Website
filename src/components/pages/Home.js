@@ -1,10 +1,9 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
-import Image from "./image/logo.PNG";
+import logo from "./image/logo.PNG";
 import "../../index.css";
 import { Input } from "reactstrap";
 import "./Donate.css";
-
 function Home() {
   return (
     <div>
@@ -47,7 +46,7 @@ function Home() {
         versions from the 1914 translation by H. Rackham.
       </p>
       <Card style={{ width: "rem" }}>
-        <Card.Img variant="top" src={Image} />
+        <Card.Img variant="top" src={logo} />
         <Card.Body>
           <Card.Title>Card Title</Card.Title>
           <Card.Text>
@@ -68,7 +67,7 @@ function Home() {
       <Button variant="outline-light">Light</Button>{" "}
       <Button variant="outline-dark">Dark</Button>
       <Card style={{ width: "25rem" }}>
-        <Card.Img variant="top" src={Image} />
+        <Card.Img variant="top" src={logo} />
         <a>
           <div className="service-head1 text-center">
             <h2>
@@ -103,8 +102,6 @@ function Home() {
           </Card.Text>
           <div className="donation-buttons">
             <Button
-              variant="outline-success"
-              variant="color-success"
               style={{
                 marginLeft: "20px",
                 backgroundColor: "green",
@@ -115,8 +112,6 @@ function Home() {
               $10
             </Button>
             <Button
-              variant="outline-success"
-              variant="color-success"
               style={{
                 marginLeft: "20px",
                 backgroundColor: "green",
@@ -127,8 +122,6 @@ function Home() {
               $25
             </Button>
             <Button
-              variant="outline-success"
-              variant="color-success"
               style={{
                 marginLeft: "20px",
                 backgroundColor: "green",
@@ -139,8 +132,6 @@ function Home() {
               $50
             </Button>
             <Button
-              variant="outline-success"
-              variant="color-success"
               style={{
                 marginLeft: "20px",
                 backgroundColor: "green",
@@ -152,8 +143,6 @@ function Home() {
             </Button>
           </div>
           <Button
-            variant="outline-success"
-            variant="color-success"
             style={{
               marginTop: "15px",
               marginLeft: "20px",
@@ -177,8 +166,6 @@ function Home() {
             }}
           ></Input>
           <Button
-            variant="outline-success"
-            variant="color-success"
             style={{
               marginTop: "15px",
               marginLeft: "20px",
@@ -188,6 +175,13 @@ function Home() {
             }}
           >
             Give Now
+          </Button>
+          <Button>
+            <img
+              className="d-block w-50"
+              src={require("../images/paypal.png")}
+              alt="Paypal"
+            />
           </Button>
         </Card.Body>
       </Card>
