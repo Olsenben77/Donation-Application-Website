@@ -17,7 +17,7 @@ class Navbar2 extends Component {
             <Nav className="mr-auto">
               <Nav.Link href="/">About Us</Nav.Link>
               <Nav.Link href="/">Donate</Nav.Link>
-              <Nav.Link href="/">News</Nav.Link>
+              <Nav.Link href="/News">News</Nav.Link>
               <NavDropdown title="Charity Map" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1" style={{ color: "grey" }}>
                   Charity Search
