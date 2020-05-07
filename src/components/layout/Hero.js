@@ -1,8 +1,11 @@
+
 import React, { useEffect, useState } from "react";
 import { Nav, Form } from "react-bootstrap";
 import "./navbar.css";
 import "./hero.css";
 import video from "../videos/mainvideo.mp4";
+
+
 function Hero() {
   const [scrollY, setScrollY] = useState({ y: 0 });
   useEffect(() => {
@@ -32,15 +35,13 @@ function Hero() {
           title="Free Stock Photos"
         >
           <Form inline>
-            <Nav.Link href="/portal" style={{ color: "white" }}>
-              Contact us
+            <Nav.Link href="/" style={{ color: "white" }}>
+              Home
             </Nav.Link>
-            <Nav.Link href="/staff" style={{ color: "white" }}>
+            <Nav.Link href="/portal" style={{ color: "white" }}>
               Members
             </Nav.Link>
-            <Nav.Link href="/" style={{ color: "white" }}>
-              Portal (Sign-In)
-            </Nav.Link>
+
           </Form>
         </a>
       </nav>
@@ -50,13 +51,13 @@ function Hero() {
             autoPlay
             loop
             muted
-            // poster="https://www.pexels.com/assets/videos/free-videos-7daa2ef41a140f70c757ce91913a4ecb90570b7d7cd2b401bae868350e02c83a.jpg"
+          // poster="https://www.pexels.com/assets/videos/free-videos-7daa2ef41a140f70c757ce91913a4ecb90570b7d7cd2b401bae868350e02c83a.jpg"
           >
             <source src={video} type="video/mp4"></source>
           </video>
         </div>
         <section className="hero__content hero__content--centered">
-          <h1 className="hero__title"> Use Donationally to:</h1>
+          <h1 className="hero__title"> </h1>
           <div
             id="container"
             style={{

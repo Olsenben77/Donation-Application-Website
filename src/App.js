@@ -8,6 +8,10 @@ import Portal from './components/pages/Portal';
 import Staff from './components/pages/Staff';
 import Login from './components/auth/Login';
 import Layout from './components/layout/Layout';
+import About from './components/pages/About';
+import Footer from './components/pages/Footer';
+
+
 
 
 import './App.css';
@@ -29,12 +33,12 @@ class App extends Component {
 
         >
           <div className="App">
-
             <Hero />
             <Navbar2 />
             <Layout>
               <div className="container">
                 <Route path="/" exact={true} component={Home} />
+                <Route path="/about" exact={true} component={About} />
                 <Route path="/News" exact={true} component={SearchNews} />
                 <Route path="/portal" exact={true} component={Portal} />
                 <SecureRoute path="/staff" exact={true} component={Staff} />
@@ -47,6 +51,7 @@ class App extends Component {
                 <Route path="/implicit/callback" component={ImplicitCallback} />
               </div>
             </Layout>
+            <Footer />
           </div>
         </Security>
       </Router>

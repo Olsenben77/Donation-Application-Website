@@ -2,13 +2,25 @@
     margin: 20px;
     margin-top: 80px;
     overflow: hidden;
-    max-height: 35vh;
+    max-height: 100vh;
     box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
     border-radius: 10px, 10px, 10px, 10px;
     padding: 50px;
+    width: auto;
+    height: auto;
 }
 
 .grids {
-    max-width: 100%;
+    width: auto;
+    height: auto;
+    /*max-width: 100%;*/
     margin: auto;
+}
+
+.container {
+    text-align: center;
+}
+
+.normal {
+    padding-top: 40px;
 }
