@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.1.0",
     "@okta/okta-react": "^1.4.1",
     "@okta/okta-signin-widget": "^3.9.2",
-    "aos": "^2.3.4",
     "antd": "^4.2.0",
+    "aos": "^2.3.4",
     "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
     "react": "^16.13.1",
@@ -14,6 +15,7 @@
     "react-dom": "^16.13.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
+    "react-scroll": "^1.7.16",
     "reactstrap": "^8.4.1",
     "styled-components": "^5.1.0"
   },
