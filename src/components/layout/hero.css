@@ -1,3 +1,6 @@
+.nav-link {
+  justify-content: space-around !important;
+}
 .main-nav-bar {
   --color-background: #232a34;
   --color-foreground: #fff;
@@ -17,6 +20,7 @@
   display: flex;
   -webkit-box-align: center;
   align-items: center;
+  justify-content: flex-end;
   padding: 0 1.15rem;
   z-index: 30;
 }
@@ -339,6 +343,7 @@ div {
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 15px;
+  padding-left: 190px;
 }
 @import url("https://fonts.googleapis.com/css?family=Roboto:700");
 
@@ -348,15 +353,16 @@ div {
   font-size: 36px;
   font-weight: bold;
   position: fixed;
-  width: 100%;
   bottom: 45%;
+  width: 100%;
+  top: 100%;
   display: block;
+  margin-bottom: 300px;
 }
 
 #flip {
   height: 50px;
   overflow: hidden;
-  padding-left: 125px;
   justify-content: center;
   align-items: center;
 }
@@ -364,10 +370,12 @@ div {
 #flip > div > div {
   color: #fff;
   padding: 10px 20px;
-  height: 55px;
-  width: 500px;
+  height: 50px;
+  width: 700px;
   margin-bottom: 45px;
   display: inline-block;
+  margin-left: 15%;
+  margin-right: 20% !important;
 }
 
 #flip div:first-child {
@@ -375,23 +383,25 @@ div {
 }
 
 #flip div div {
-  background: grey;
-  align-items: center;
-  justify-content: center;
   border-radius: 15px;
   padding: 7px;
+  text-decoration: underline;
+  padding-left: 45px !important;
 }
 #flip div:first-child div {
-  background: #b09a70;
   padding-top: 6px;
+  color: white;
   border-radius: 15px;
   padding: 7px;
+  text-decoration: underline;
 }
 #flip div:last-child div {
-  background: #163d26;
   padding-top: 6px;
   border-radius: 15px;
+  color: white;
   padding: 7px;
+  text-decoration: underline;
+  padding-left: 45px !important;
 }
 
 @keyframes show {
