@@ -9,3 +9,11 @@
 .card {
     width: 18rem;
 }
+
+.home-div, .home-news {
+    padding-top: 30px;
+}
+
+.home-news {
+    margin-top: 40px;
+}
