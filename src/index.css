@@ -2,11 +2,14 @@ body {
   margin: 0;
   padding: 0;
   padding-bottom: 40px;
-  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  font-family: "Raleway", Arial, Helvetica, sans-serif;
 }
 
 p {
   font-size: 14px;
   font-weight: 400;
   font-stretch: 100%;
+}
+* {
+  box-sizing: border-box;
 }

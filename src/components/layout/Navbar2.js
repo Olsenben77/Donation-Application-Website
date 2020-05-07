@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Navbar, Nav, NavDropdown, Form } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import "./navbar.css";
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -15,17 +15,10 @@ class Navbar2 extends Component {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="/" style={{ color: "white" }}>
-                About Us
-              </Nav.Link>
-              <Nav.Link href="/" style={{ color: "white" }}>
-                Donate
-              </Nav.Link>
-              <NavDropdown
-                title="Charity Map"
-                id="basic-nav-dropdown"
-                style={{ color: "white" }}
-              >
+              <Nav.Link href="/">About Us</Nav.Link>
+              <Nav.Link href="/">Donate</Nav.Link>
+              <Nav.Link href="/">News</Nav.Link>
+              <NavDropdown title="Charity Map" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1" style={{ color: "grey" }}>
                   Charity Search
                 </NavDropdown.Item>
@@ -34,17 +27,6 @@ class Navbar2 extends Component {
                 </NavDropdown.Item>
               </NavDropdown>
             </Nav>
-            <Form inline>
-              <Nav.Link href="/portal" style={{ color: "white" }}>
-                Contact us
-              </Nav.Link>
-              <Nav.Link href="/staff" style={{ color: "white" }}>
-                Members
-              </Nav.Link>
-              <Nav.Link href="/" style={{ color: "white" }}>
-                Portal (Sign-In)
-              </Nav.Link>
-            </Form>
           </Navbar.Collapse>
         </Navbar>
       </div>

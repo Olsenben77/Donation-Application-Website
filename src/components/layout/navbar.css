@@ -1,7 +1,9 @@
 body {
   font-family: "raleway", Arial, Helvetica, sans-serif;
 }
-
+.bg-dark {
+  background-color: #163d26 !important;
+}
 #title {
   color: #28a745;
   font-weight: bold;
@@ -40,5 +42,5 @@ body {
   z-index: 2;
 }
 .navbar-light .navbar-nav .nav-link {
-  color: rgb(245, 212, 212) !important;
+  color: white !important;
 }
