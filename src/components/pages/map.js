@@ -1,178 +1,201 @@
-var map, infoWindow, infoWindowTwo;
-var geoButton = document.getElementById("geoButton");
+import React,{Component} from 'react';
+var map;
+var input;
+var searchBox;
+var geoButton;
+var infoWindow;
+var marker;
 
 
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: {lat: 37.1, lng: -95.7},
-    zoom: 3
-  });
-  // Create the search box and link it to the UI element.
-  var input = document.getElementById('search');
-  var searchBox = new google.maps.places.SearchBox(input);
-  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-  
-  // Bias the SearchBox results towards current map's viewport.
-  map.addListener('bounds_changed', function() {
-    searchBox.setBounds(map.getBounds());
-  });
-  
-  searchBox.addListener('places_changed', function() {
-    var bounds = new google.maps.LatLngBounds();
-    var places = searchBox.getPlaces();
-    var bounds = new google.maps.LatLngBounds();
-    places.forEach(function(place) {
-      if (!place.geometry) {
-        console.log("Returned place contains no geometry");
-        return;
-      }
-      
-      if (place.geometry.viewport) {
-        // Only geocodes have viewport.
-        bounds.union(place.geometry.viewport);
-      } else {
-        bounds.extend(place.geometry.location);
-      }
-    });
-    map.fitBounds(bounds);
-    getCharitiesSearch()
-  
-  });
-  
-  geoButton.addEventListener("click",function(){
-    getCharitiesGeolocation()
-  });
-  
-  function getCharitiesGeolocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        function(position) {
-          var pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-          };
-          var request = {
-            location: pos,
-            radius: 8047,
-            query:"Charity",
-          };
-          
-          infoWindow.open(map);
-          map.setCenter(pos);
-          map.panTo(pos);
-          map.setZoom(10);
-          
-          // Charity search
-          
-          infoWindowTwo = new google.maps.InfoWindow();
-          var service = new google.maps.places.PlacesService(map);
-          service.textSearch(request, callback);
-          
-        },
-        function() {
-          handleLocationError(true, infoWindow, map.getCenter());
-        }
-        )
-        
-        
-      }else {
-        // Browser doesn't support Geolocation
-        handleLocationError(false, infoWindow, map.getCenter());
-      };
-    }
-   
-    function getCharitiesSearch() {
-      var geocoder = new google.maps.Geocoder();
-      var address = input.value
-      geocoder.geocode({'address': address}, function(results, status) {
-        
-      // var splitWhatever = whatever.split(',')
-      // console.log(splitWhatever)
-        var pos = {
-          lat: results[0].geometry.location.lat(),
-          lng: results[0].geometry.location.lng()
-        };
-
-        var request = {
-          location: pos,
-          radius: 8047,
-          query:"Charity",
-        };
-
-        // infoWindow.open(map);
-        // map.setCenter(pos);
-        // map.panTo(pos);
-        // map.setZoom(10);
-
-        infoWindowTwo = new google.maps.InfoWindow();
-        var service = new google.maps.places.PlacesService(map);
-        service.textSearch(request, callback);
-
-
-
-      })
-
-     
-      
-      
-      
-      // Charity search
-      
-      
-    }
-    // if (results.geometry) {
-    //   map.panTo(results.geometry.location);
-    //   map.setZoom(15);
-    // };
-    
-    
-    
-    
-    //Charity search
-    // var request = {
-    //   location: pos,
-    //   radius: 8047,
-    //   query:"Charity",
-    // };
-    
-    infoWindow = new google.maps.InfoWindow();
-    // Try HTML5 geolocation
-    
-    //callback function
-    function callback(results, status) {
-      if (status == google.maps.places.PlacesServiceStatus.OK)
-      for (var i = 0; i < results.length; i++) {
+function callback (results, status) {
+    if (status == window.google.maps.places.PlacesServiceStatus.OK)
+    for (var i = 0; i < results.length; i++) {
         createMarker(results[i], i);
-      }
     }
-    //create marker function
-    function createMarker(place, i) {
-      var marker = new google.maps.Marker({
+}
+
+function createMarker (place, i) {
+    marker = new window.google.maps.Marker({
         map: map,
         position: place.geometry.location
-      });
-      
-      var results = document.getElementById('results');
-      var tr = document.createElement('tr');
-      tr.style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
-      var nameTd = document.createElement('td');
-      var name = document.createTextNode(place.name);
-      nameTd.appendChild(name);
-      tr.appendChild(nameTd);
-      results.appendChild(tr);
-      
-      
-      google.maps.event.addListener(marker, 'click', function(){
-        infoWindowTwo.setContent(place.name);
-        infoWindowTwo.open(map, this);
-        console.log(place);
-        $("#container").html("Store: " + place.name);
-        $("#container2").html("Location: " +place.formatted_address);
-        if (place.opening_hours.open_now === true){$("#container3").html("This place is open!")
-      } else {
-        $("#container3").html("Sorry, this place is closed.")
-      };
-      // $("#container4").text("Store: " + JSON.stringify(place));
-    })
+    });
     
-  }};
+
+    var results = document.getElementById('results');
+    var tr = document.createElement('tr');
+
+    tr.style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
+    var nameTd = document.createElement('td');
+
+    var name = document.createTextNode(place.name);
+    nameTd.appendChild(name);
+    tr.appendChild(nameTd);
+    results.appendChild(tr);
+    
+    }
+ 
+function getCharitiesSearch () {
+        var geocoder = new window.google.maps.Geocoder();
+        var address = input.value
+        geocoder.geocode({'address': address}, function(results, status) {
+            
+            var pos = {
+                lat: results[0].geometry.location.lat(),
+                lng: results[0].geometry.location.lng()
+            };
+            
+            var request = {
+                location: pos,
+                radius: 8047,
+                query:"Charity",
+            };
+            
+            var service = new window.google.maps.places.PlacesService(map);
+       
+            service.textSearch(request, callback);
+
+        })
+    };
+class Maps extends Component {
+
+    constructor(){
+        super();
+        this.getCharitiesGeolocation = this.getCharitiesGeolocation.bind(this)
+        this.geoClicker = this.geoClicker.bind(this)
+    }
+
+    createScript = ()=> {
+        var scripter = document.createElement('script');
+        scripter.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyBX03GhMwKbff_jiNlFovzpYPB5L6LssMo&libraries=places&callback=initMap`;
+        scripter.async = true;
+        scripter.defer = true;
+        document.body.appendChild(scripter)
+        
+    }
+    
+    componentDidMount(){
+        this.createScript(); 
+        window.initMap = this.initMap
+
+
+    }
+    
+     //callback function
+    
+
+   
+    
+    
+
+    getCharitiesGeolocation () {
+        var service = new window.google.maps.places.PlacesService(map);
+        
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                function(position) {
+                    var pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+                    var request = {
+                        location: pos,
+                        radius: 8047,
+                        query:"Charity",
+                    };
+                    
+                    infoWindow.open(map);
+                    map.setCenter(pos);
+                    map.panTo(pos);
+                    map.setZoom(10);
+                    
+                    // Charity search
+                    
+                    
+                    service.textSearch(request, callback);
+                    
+                },
+                function() {
+                    // handleLocationError(true, infoWindow, map.getCenter());
+                }
+            )
+                
+                
+            }else {
+                // Browser doesn't support Geolocation
+                // handleLocationError(false, infoWindow, map.getCenter());
+            };
+
+        //   // Bias the SearchBox results towards current map's viewport.
+        map.addListener('bounds_changed', function() {
+            searchBox.setBounds(map.getBounds());
+        });
+            
+      
+    
+        
+        
+    };
+
+    geoClicker(){
+        this.getCharitiesGeolocation()
+    }
+    initMap  () {
+
+        geoButton = document.getElementById("geoButton");
+        infoWindow = new window.google.maps.InfoWindow();
+        map = new window.google.maps.Map(document.getElementById("map"), {
+            center: {lat: 37.1, lng: -95.7},
+            zoom: 3
+        }); 
+        input = document.getElementById('search');
+        searchBox = new window.google.maps.places.SearchBox(input);
+        map.controls[window.google.maps.ControlPosition.TOP_LEFT].push(input);
+        
+        map.addListener('bounds_changed', function() {
+            searchBox.setBounds(map.getBounds());
+        });
+        
+        searchBox.addListener('places_changed', function() {
+            var bounds = new window.google.maps.LatLngBounds();
+            var places = searchBox.getPlaces();
+            places.forEach(function(place) {
+                if (!place.geometry) {
+                    console.log("Returned place contains no geometry");
+                    return;
+                }
+                
+                if (place.geometry.viewport) {
+                    // Only geocodes have viewport.
+                    bounds.union(place.geometry.viewport);
+                } else {
+                    bounds.extend(place.geometry.location);
+                }
+            });
+            map.fitBounds(bounds);
+
+            getCharitiesSearch();
+            
+        });
+    };
+
+    render () {
+        return (
+            <div>
+            <div id ="fakebox">
+            <input id= "search"/>
+            <button onClick={this.geoClicker}id="geoButton">Geolocation</button>
+            </div>
+            
+            <div ref={this.googleMap}id="map"></div>
+            
+            <div id="listing">
+            <table id="resultsTable">
+            <tbody id="results"></tbody>
+            </table>
+            </div>
+            </div>
+            )
+        };
+        
+    }
+    export default Maps;

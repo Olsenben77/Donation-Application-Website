@@ -7,7 +7,9 @@ import Home from './components/pages/Home';
 import Portal from './components/pages/Portal';
 import Staff from './components/pages/Staff';
 import Login from './components/auth/Login';
+import Map from './components/pages/Map'
 import Layout from './components/layout/Layout';
+
 
 
 import './App.css';
@@ -36,6 +38,7 @@ class App extends Component {
                 <Route path="/" exact={true} component={Home} />
                 <Route path="/portal" exact={true} component={Portal} />
                 <SecureRoute path="/staff" exact={true} component={Staff} />
+                <Route path="map" exact={true} component={Map} />
                 <Route
                   path="/login"
                   render={() => (
