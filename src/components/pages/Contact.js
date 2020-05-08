@@ -87,7 +87,7 @@ class Contact extends Component {
                 console.log(error);
             });
 
-
+    
     }
 
 
@@ -256,8 +256,6 @@ class Contact extends Component {
                                             </Col>
 
                                         </Form.Row>
-
-
                                         <Form.Group controlId="exampleForm.ControlTextarea1" className="site-form__form-group">
                                             <Form.Label>Message:</Form.Label>
                                             <Form.Control as="textarea" rows="8" name="message" placeholder="Enter your message" onChange={handleChange} className={`site-form__textarea ${errors.message && touched.message ? 'site-form__input-error' : ''}`} id="input-message" value={values.message} />
