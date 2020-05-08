@@ -10,6 +10,29 @@
     height: auto;
 }
 
+.boxes2 {
+    margin: 20px;
+    margin-top: 80px;
+    overflow: hidden;
+    max-height: 100vh;
+    padding: 50px;
+    width: auto;
+    height: auto;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+#photo {
+    box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px, 10px, 10px, 10px;
+    border-color: white 2px;
+}
+
+#div_size {
+    width: 100%;
+    height: auto;
+}
+
 .grids {
     width: auto;
     height: auto;
@@ -19,8 +42,47 @@
 
 .container {
     text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
 }
 
 .normal {
-    padding-top: 40px;
+    padding-top: 60px;
+}
+
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 576px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 100%;
+    }
 }

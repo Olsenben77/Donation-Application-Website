@@ -17,3 +17,50 @@
 .home-news {
     margin-top: 40px;
 }
+
+.home_background1 {
+    background-color: white;
+}
+
+.home_background2 {
+    background-color: #B09A70;
+}
+
+.home_background3 {
+    background-color: white;
+}
+
+.home_background4 {
+    background-color: #163d26;
+}
+
+.page_inner_div {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+/* contact page*/
+
+#contact_form {
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.contact_lower_div {
+    background-color: #343a40;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+}
+
+#contact_photo {
+    padding: 10px;
+    opacity: 0.3;
+}
+
+#contact_photo:hover {
+    opacity: 1;
+}

@@ -27,6 +27,7 @@ class Navbar2 extends Component {
                   Charities Near Me
                 </NavDropdown.Item>
               </NavDropdown>
+              <Nav.Link href="/contact">Contact Us</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
