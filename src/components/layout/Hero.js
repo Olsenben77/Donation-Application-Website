@@ -1,9 +1,11 @@
-
 import React, { useEffect, useState } from "react";
 import { Nav, Form } from "react-bootstrap";
 import "./navbar.css";
 import "./hero.css";
+
 import video from "../videos/alternate_video2.mp4";
+
+import White from "../images/white.png";
 
 
 function Hero() {
@@ -34,6 +36,28 @@ function Hero() {
           href="/"
           title="Free Stock Photos"
         >
+          <div class="main-nav-bar__logo__img">
+            <svg
+              src={White}
+              width="32px"
+              height="32px"
+              viewBox="0 0 32 32"
+            ></svg>
+          </div>
+          <div
+            class="hide-when-mid-size-and-smaller main-nav-bar__logo__text"
+            href="/"
+            style={{
+              position: "absolute",
+              left: "3%",
+            }}
+          >
+            <img
+              src={White}
+              href="/"
+              style={{ width: "45px", height: "45px", marginRight: "10px" }}
+            ></img>
+          </div>
           <Form inline>
             <Nav.Link href="/" style={{ color: "white" }}>
               Home
@@ -41,7 +65,6 @@ function Hero() {
             <Nav.Link href="/portal" style={{ color: "white" }}>
               Members
             </Nav.Link>
-
           </Form>
         </a>
       </nav>
@@ -51,7 +74,7 @@ function Hero() {
             autoPlay
             loop
             muted
-          // poster="https://www.pexels.com/assets/videos/free-videos-7daa2ef41a140f70c757ce91913a4ecb90570b7d7cd2b401bae868350e02c83a.jpg"
+            // poster="https://www.pexels.com/assets/videos/free-videos-7daa2ef41a140f70c757ce91913a4ecb90570b7d7cd2b401bae868350e02c83a.jpg"
           >
             <source src={video} type="video/mp4"></source>
           </video>

@@ -1,5 +1,6 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment } from "react";
 import axios from "axios";
+
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { Form, Button, Col, Row } from 'react-bootstrap';
@@ -16,37 +17,71 @@ import './style.css';
 
 
 
+
 class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isShowMsg: false,
+      isSending: false,
+      show: false,
+    };
+  }
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            isShowMsg: false,
-            isSending: false,
-            show: false
+  handleModal() {
+    this.setState({ show: !this.state.show });
+  }
+
+  onSubmit = (values, { resetForm }) => {
+    const { isShowMsg, isSending } = this.state;
+    this.setState({
+      isSending: true,
+    });
+    axios
+      .post("https://formcarry.com/s/pDNgV7JpwdC5", values, {
+        headers: { Accept: "application/json" },
+      })
+      .then((response) => {
+        if (response.data.status === "success") {
+          this.setState({ isSending: false, isShowMsg: true });
+          resetForm();
         }
-    }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
-    handleModal() {
-        this.setState({ show: !this.state.show })
-    }
+  render() {
+    const { isSending, isShowMsg } = this.state;
 
+    return (
+      <div>
+        <section className="site-section" id="contact_form">
+          <div className="page_inner_div">
+            <h1 className="site-heading" style={{ fontWeight: "900" }}>
+              {" "}
+              Do you have a question?{" "}
+            </h1>
+            <h3 className="site-heading" style={{ fontWeight: "900" }}>
+              Give us a review..
+            </h3>
+            <h5>Send us a message!</h5>
 
-    onSubmit = (values, { resetForm }) => {
-        const { isShowMsg, isSending } = this.state;
-        this.setState({
-            isSending: true
-        })
-        axios.post(
-            "https://formcarry.com/s/pDNgV7JpwdC5",
-            values,
-            { headers: { "Accept": "application/json" } }
-        )
-            .then((response) => {
-                if (response.data.status === "success") {
-                    this.setState({ isSending: false, isShowMsg: true })
-                    resetForm();
+            <Formik
+              className="site-form"
+              initialValues={{
+                name: "",
+                email: "",
+                subject: "",
+                message: "",
+              }}
+              validate={(values) => {
+                let errors = {};
+                if (!values.name) {
+                  errors.name = "Name is required";
                 }
+
             })
             .catch((error) => {
                 console.log(error);
@@ -279,11 +314,12 @@ class Contact extends Component {
                     </Space>
 
                 </section>
+
+     
             </div>
-
-        )
-    }
-
+        
+    )
+  }
 }
 
 export default Contact;
