@@ -29,7 +29,7 @@ const About = () => {
                 <div data-aos="fade-left" id="normal">
 
                     <h1 style={{ fontWeight: "900" }}> DONATIONALLY... </h1>
-                    <h4> Our mission is to build lasting relationship with the community and help those who are in need.</h4>
+                    <h4> Our mission is to create lasting change one donation at a time.</h4>
                 </div>
 
 
@@ -40,7 +40,7 @@ const About = () => {
                     <div data-aos="fade-right" className="boxes2" style={{ backgroundColor: "#F8B195" }}>
 
 
-                        <h3 style={{ color: "white" }}> Our vision is a world in which every person get a chance to have a better life.
+                        <h3 style={{ color: "white" }}> We envision a world everyone has the opportunity to live a better life.
 
                         </h3>
 

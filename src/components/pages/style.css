@@ -58,9 +58,23 @@
 
 #contact_photo {
     padding: 10px;
-    opacity: 0.3;
+    opacity: 1;
 }
 
 #contact_photo:hover {
-    opacity: 1;
+    opacity: 0.3;
+}
+
+/* Contact page upper div - Creator and Founder */
+
+#services {
+    background-color: #009688;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+/* Contact icons - FOOTER */
+
+.contact_icon {
+    padding-right: 20px;
 }
