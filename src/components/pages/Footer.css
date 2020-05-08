@@ -1,0 +1,69 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+  background-color: lightblue;
+  color: #fff;
+}
+section {
+  text-align: center;
+}
+.footer #button {
+  width: 35px;
+  height: 35px;
+  margin: 0 auto;
+  position: relative;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.footer img :hover {
+  width: 6vw !important;
+
+  height: auto;
+  border: #3a3a3a 12px solid;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  position: relative;
+}
+.footer {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 2em;
+  overflow: hidden;
+  margin: 0 auto;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  z-index: 999;
+}
+.footer:hover {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  height: 25em;
+}
+.footer #container {
+  margin-top: 3px;
+  width: 100%;
+  height: 400px;
+  position: relative;
+  top: 0;
+  left: 0;
+  background: #3a3a3a;
+}
+#button {
+  align-items: center;
+  width: 4vw !important;
+  height: auto !important;
+}
