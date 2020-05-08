@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Nav, Form } from "react-bootstrap";
 import "./navbar.css";
 import "./hero.css";
-import video from "../videos/mainvideo.mp4";
+import video from "../videos/alternate_video2.mp4";
 
 
 function Hero() {
