@@ -10,6 +10,9 @@ import Login from './components/auth/Login';
 import Layout from './components/layout/Layout';
 import About from './components/pages/About';
 import Footer from './components/pages/Footer';
+import Contact from './components/pages/Contact';
+
+
 
 
 
@@ -36,10 +39,11 @@ class App extends Component {
             <Hero />
             <Navbar2 />
             <Layout>
-              <div className="container">
+              <div>
                 <Route path="/" exact={true} component={Home} />
                 <Route path="/about" exact={true} component={About} />
                 <Route path="/News" exact={true} component={SearchNews} />
+                <Route path="/contact" exact={true} component={Contact} />
                 <Route path="/portal" exact={true} component={Portal} />
                 <SecureRoute path="/staff" exact={true} component={Staff} />
                 <Route
