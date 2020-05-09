@@ -1,17 +1,27 @@
 .ant-carousel .slick-slide {
-    text-align: center;
-    height: 560px;
-    line-height: 160px;
-    background: #005F40;
-    overflow: hidden;
-  }
-  
-  .ant-carousel .slick-slide h3 {
-    color: #fff;
-  }
+  text-align: center;
+  height: 560px;
+  line-height: 160px;
+  background: white;
+  overflow: hidden;
+}
 
-  .img {
-      vertical-align: middle !important;
-      height: 300px;
-      width: 300px;
-  }
+.ant-carousel .slick-slide h3 {
+  color: #fff;
+}
+
+.img {
+  vertical-align: middle !important;
+  height: 300px;
+  width: 300px;
+}
+
+.ant-carousel .slick-dots li button {
+  background-color: black;
+}
+
+.page_inner_div_news {
+  padding-left: 15%;
+  padding-right: 15%;
+  text-align: left;
+}
