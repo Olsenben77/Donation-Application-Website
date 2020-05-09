@@ -13,17 +13,11 @@ import About from './components/pages/About';
 import Footer from './components/pages/Footer';
 import Contact from './components/pages/Contact';
 
-
-
-
-
-
-
-import './App.css';
-import SearchNews from './components/pages/News';
+import "./App.css";
+import SearchNews from "./components/pages/News";
 
 function onAuthRequired({ history }) {
-  history.push('/login');
+  history.push("/login");
 }
 
 class App extends Component {
@@ -33,9 +27,8 @@ class App extends Component {
         <Security
           issuer="https://dev-240113.okta.com/oauth2/default"
           client_id="0oaad7oto4uSwXPVM4x6"
-          redirect_uri={window.location.origin + '/implicit/callback'}
+          redirect_uri={window.location.origin + "/implicit/callback"}
           onAuthRequired={onAuthRequired}
-
         >
           <div className="App">
             <Hero />
@@ -45,15 +38,19 @@ class App extends Component {
                 <Route path="/" exact={true} component={Home} />
                 <Route path="/about" exact={true} component={About} />
                 <Route path="/News" exact={true} component={SearchNews} />
+                <Route path="/Charity" exact={true} component={Charity} />
+                <Route path="/Search" exact={true} component={Search} />
+                <Route path="/Saved" exact={true} component={Saved} />
                 <Route path="/contact" exact={true} component={Contact} />
                 <Route path="/portal" exact={true} component={Portal} />
                 <SecureRoute path="/staff" exact={true} component={Staff} />
+<<<<<<< HEAD
                 <Route path="/map" exact={true} component={Map} />
+=======
+>>>>>>> 2ffce26dd64005095fb379966a83dc92cbd8d492
                 <Route
                   path="/login"
-                  render={() => (
-                    <Login baseUrl="https://dev-240113.okta.com" />
-                  )}
+                  render={() => <Login baseUrl="https://dev-240113.okta.com" />}
                 />
                 <Route path="/implicit/callback" component={ImplicitCallback} />
               </div>
@@ -67,3 +64,4 @@ class App extends Component {
 }
 
 export default App;
+
