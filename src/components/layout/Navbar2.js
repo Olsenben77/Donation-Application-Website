@@ -23,7 +23,7 @@ class Navbar2 extends Component {
                 <NavDropdown.Item href="#action/3.1" style={{ color: "grey" }}>
                   Charity Search
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.1" style={{ color: "grey" }}>
+                <NavDropdown.Item href="/Map" style={{ color: "grey" }}>
                   Charities Near Me
                 </NavDropdown.Item>
               </NavDropdown>
