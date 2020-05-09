@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Staff extends Component {
   state = {
-    currentUserName: '',
-    currentUserEmail: ''
+    currentUserName: "",
+    currentUserEmail: "",
   };
 
   componentDidMount() {
-    const idToken = JSON.parse(localStorage.getItem('okta-token-storage'));
+    const idToken = JSON.parse(localStorage.getItem("okta-token-storage"));
     this.setState({
       currentUserEmail: idToken.idToken.claims.email,
-      currentUserName: idToken.idToken.claims.name
+      currentUserName: idToken.idToken.claims.name,
     });
   }
 
