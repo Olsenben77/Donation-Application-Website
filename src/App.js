@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Security, SecureRoute, ImplicitCallback } from '@okta/okta-react';
 import Hero from './components/layout/Hero';
-import Navbar2 from './components/layout/Navbar2';
+import Navbar3 from './components/layout/Navbar3';
 import Home from './components/pages/Home';
 import Portal from './components/pages/Portal';
 import Staff from './components/pages/Staff';
@@ -35,7 +35,7 @@ class App extends Component {
         >
           <div className="App">
             <Hero />
-            <Navbar2 />
+            <Navbar3 />
             <Layout>
               <div>
                 <Route path="/" exact={true} component={Home} />
