@@ -18,13 +18,13 @@
 ## Application Interface
 
 This is the main log-in portal of the website. Users are prompted to provide a username and email which creates them an individual account.
-![Portal](public/assets/img/mainpage.png)
+![Portal](src/components/images/Portal.png)
 
 The About Us page describes our core values and motivation
-![Aboutus](public/assets/img/highscore.png)
+![Aboutus](src/components/images/Aboutus.png)
 
 The News page includes a search bar - users can look up worldwide news related to charities.
-![News](public/assets/img/controller.png)
+![News](src/components/images/News.png)
 
 The Charity Search page provides the user with a worldmap, and the ability to find charities by location.
 ![Charitysearch](public/assets/img/username.png)
@@ -80,11 +80,11 @@ Project is created with:
 
 ## UML
 
-- ![UML](https://app.diagrams.net/#G1Ef64p8WggBs6HHD4BtYlJ4aql8GPUpMv)
+- ![UML](public/assets/img/UML.png)
 
 ## Database
 
-- This project was completed using Mysql workbench, populating the database with the user's ID, name, and score. We linked this database to JawsDB and is available as an application on Heroku.
+- This project was completed using MongoDB, populating the database with "favorited" charity information including the name, description, rating, and website URL.
 
 ## Bugs And Feature Requests
 
