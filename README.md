@@ -18,19 +18,24 @@
 ## Application Interface
 
 This is the main log-in portal of the website. Users are prompted to provide a username and email which creates them an individual account.
+
 ![Portal](src/components/images/Portal.png)
 
-The About Us page describes our core values and motivation
+The About Us page describes our core values and motivation.
+
 ![Aboutus](src/components/images/Aboutus.png)
 
 The News page includes a search bar - users can look up worldwide news related to charities.
+
 ![News](src/components/images/News.png)
 
 The Charity Search page provides the user with a worldmap, and the ability to find charities by location.
-![Charitysearch](public/assets/img/username.png)
+
+![Charitysearch](src/components/images/Charitysearch.png)
 
 The Donate page includes a charity search bar, and custom buttons allowing the user to donate an amount of their choosing to their selected charity.
-![Donate](public/assets/img/game.png)
+
+![Donate](src/components/images/Donate.png)
 
 ## User Story
 
@@ -80,7 +85,7 @@ Project is created with:
 
 ## UML
 
-- ![UML](https://app.diagrams.net/#G1Ef64p8WggBs6HHD4BtYlJ4aql8GPUpMv)
+- ![UML](src/components/images/UML.png)
 
 ## Database
 
