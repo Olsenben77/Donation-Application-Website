@@ -37,6 +37,10 @@ The Donate page includes a charity search bar, and custom buttons allowing the u
 
 ![Donate](src/components/images/Donate.png)
 
+The Contact Us page provides personal information / photos about the creators and founders of Donationally.com. There is also a "Review" section where users can ask questions or give comments.
+
+![Contact](src/components/images/Contactus.png)
+
 ## User Story
 
 AS A philanthropist
