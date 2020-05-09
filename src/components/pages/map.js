@@ -6,7 +6,7 @@ var geoButton;
 var infoWindow;
 var marker;
 var place;
-var markers;
+var markers = [];
 function callback (results, status) {
     if (status == window.google.maps.places.PlacesServiceStatus.OK)
     for (var i = 0; i < results.length; i++) {
@@ -14,11 +14,11 @@ function callback (results, status) {
     }
 }
 function createMarker (place, i) {
-    marker = new window.google.maps.Marker({
+    markers[i] = new window.google.maps.Marker({
         map: map,
         position: place.geometry.location
     });
-    window.google.maps.event.addListener(marker, 'click', function() {
+    window.google.maps.event.addListener(markers[i], 'click', function() {
         infoWindow.setContent(place.name + "<br>" + place.formatted_address );
         infoWindow.open(map, this);
     });
@@ -31,7 +31,7 @@ function createMarker (place, i) {
     tr.appendChild(nameTd);
     results.appendChild(tr);
     tr.onclick = function() {
-        window.google.maps.event.trigger(marker[i], 'click');
+        window.google.maps.event.trigger(markers[i], 'click');
       };
     }
 function getCharitiesSearch () {
