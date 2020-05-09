@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./navbar3.css";
+import { NavDropdown } from 'react-bootstrap';
+
+
 
 class Navbar3 extends Component {
     state = {
@@ -33,7 +36,7 @@ class Navbar3 extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
-                <Link className="navbar-brand" to="/">
+                <Link className="navbar-brand" to="/" style={{ fontWeight: "700" }}>
                     DONATIONALLY
         </Link>
                 <button
@@ -85,33 +88,48 @@ class Navbar3 extends Component {
                                 News
               </Link>
                         </li>
-                        <li className="nav-item">
-                            <Link
-                                onClick={this.toggleNav}
-                                className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
-                                to="/Map"
-                            >
-                                Charity Search
-              </Link>
+
+                        <li class="nav-item dropdown">
+                            <NavDropdown title="Charity Search" id="basic-nav-dropdown">
+                                <NavDropdown.Item to="/Map"><Link
+                                    onClick={this.toggleNav}
+                                    className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
+                                    to="/Map"
+                                    style={{ color: "black" }}
+                                >By Map</Link></NavDropdown.Item>
+                                <NavDropdown.Item to="/Search"><Link
+                                    onClick={this.toggleNav}
+                                    className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
+                                    to="/Search"
+                                    style={{ color: "black" }}
+                                >By Name</Link></NavDropdown.Item>
+                            </NavDropdown>
                         </li>
-                        <li className="nav-item">
-                            <Link
-                                onClick={this.toggleNav}
-                                className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
-                                to="/portal"
-                            >
-                                Sign-up
-              </Link>
+
+                        <li class="nav-item dropdown">
+                            <NavDropdown title="Sign-In" id="basic-nav-dropdown">
+                                <NavDropdown.Item to="/portal"><Link
+                                    onClick={this.toggleNav}
+                                    className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
+                                    to="/portal"
+                                    style={{ color: "black" }}
+                                >Sign-up</Link></NavDropdown.Item>
+                                <NavDropdown.Item to="/staff"><Link
+                                    onClick={this.toggleNav}
+                                    className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
+                                    to="/staff"
+                                    style={{ color: "black" }}
+                                >Members</Link></NavDropdown.Item>
+                                <NavDropdown.Item to="/staff"><Link
+                                    onClick={this.toggleNav}
+                                    className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
+                                    to="/staff"
+                                    style={{ color: "black" }}
+                                >Portal</Link></NavDropdown.Item>
+                            </NavDropdown>
                         </li>
-                        <li className="nav-item">
-                            <Link
-                                onClick={this.toggleNav}
-                                className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
-                                to="/staff"
-                            >
-                                Members
-              </Link>
-                        </li>
+
+
                         <li className="nav-item">
                             <Link
                                 onClick={this.toggleNav}
@@ -121,6 +139,7 @@ class Navbar3 extends Component {
                                 Contact Us
               </Link>
                         </li>
+
                     </ul>
                 </div>
             </nav>
