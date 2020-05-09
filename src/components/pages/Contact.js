@@ -36,7 +36,7 @@ class Contact extends Component {
       isSending: true
     })
     axios.post(
-      "https://formcarry.com/s/pDNgV7JpwdC5",
+      "https://formcarry.com/s/AcKwMfI0r0RW",
       values,
       { headers: { "Accept": "application/json" } }
     )
