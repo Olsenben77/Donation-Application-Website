@@ -45,7 +45,7 @@ const Footer = () => {
 
             <Space size="small" style={{ color: "white" }}>
                 <p>Copyright</p><CopyrightCircleOutlined style={{ fontSize: '10px', color: "white" }} /><p> donationally 2020</p>
-                <img src={Icon} style={{ width: "90px", height: "65px" }} id="contact_photo" ></img>
+                <img src={Icon} alt="" style={{ width: "90px", height: "65px" }} id="contact_photo" ></img>
 
             </Space>
 
