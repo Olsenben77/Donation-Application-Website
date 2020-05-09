@@ -7,6 +7,7 @@ import API from "../../utils/API";
 import Results from "../Results";
 import ViewBtn from "../ViewBtn";
 import SaveBtn from "../SaveBtn";
+import CharityDB from "../../models"
 
 class Search extends Component {
   state = {
