@@ -91,7 +91,16 @@ class Navbar3 extends Component {
                                 className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
                                 to="/Map"
                             >
-                                Charity Search
+                                Serarch by Map
+              </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link
+                                onClick={this.toggleNav}
+                                className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
+                                to="/Search"
+                            >
+                                Search by Name
               </Link>
                         </li>
                         <li className="nav-item">
