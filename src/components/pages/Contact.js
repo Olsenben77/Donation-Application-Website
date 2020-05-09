@@ -1,6 +1,5 @@
-import React, { Component, Fragment } from "react";
+import React, { Component, Fragment } from 'react';
 import axios from "axios";
-
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { Form, Button, Col, Row } from 'react-bootstrap';
@@ -17,77 +16,43 @@ import './style.css';
 
 
 
-
 class Contact extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isShowMsg: false,
-      isSending: false,
-      show: false,
-    };
-  }
 
-  handleModal() {
-    this.setState({ show: !this.state.show });
-  }
-
-  onSubmit = (values, { resetForm }) => {
-    const { isShowMsg, isSending } = this.state;
-    this.setState({
-      isSending: true,
-    });
-    axios
-      .post("https://formcarry.com/s/pDNgV7JpwdC5", values, {
-        headers: { Accept: "application/json" },
-      })
-      .then((response) => {
-        if (response.data.status === "success") {
-          this.setState({ isSending: false, isShowMsg: true });
-          resetForm();
+    constructor(props) {
+        super(props);
+        this.state = {
+            isShowMsg: false,
+            isSending: false,
+            show: false
         }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+    }
 
-  render() {
-    const { isSending, isShowMsg } = this.state;
+    handleModal() {
+        this.setState({ show: !this.state.show })
+    }
 
-    return (
-      <div>
-        <section className="site-section" id="contact_form">
-          <div className="page_inner_div">
-            <h1 className="site-heading" style={{ fontWeight: "900" }}>
-              {" "}
-              Do you have a question?{" "}
-            </h1>
-            <h3 className="site-heading" style={{ fontWeight: "900" }}>
-              Give us a review..
-            </h3>
-            <h5>Send us a message!</h5>
 
-            <Formik
-              className="site-form"
-              initialValues={{
-                name: "",
-                email: "",
-                subject: "",
-                message: "",
-              }}
-              validate={(values) => {
-                let errors = {};
-                if (!values.name) {
-                  errors.name = "Name is required";
+    onSubmit = (values, { resetForm }) => {
+        const { isShowMsg, isSending } = this.state;
+        this.setState({
+            isSending: true
+        })
+        axios.post(
+            "https://formcarry.com/s/pDNgV7JpwdC5",
+            values,
+            { headers: { "Accept": "application/json" } }
+        )
+            .then((response) => {
+                if (response.data.status === "success") {
+                    this.setState({ isSending: false, isShowMsg: true })
+                    resetForm();
                 }
-
             })
             .catch((error) => {
                 console.log(error);
             });
 
-    
+
     }
 
 
@@ -256,6 +221,8 @@ class Contact extends Component {
                                             </Col>
 
                                         </Form.Row>
+
+
                                         <Form.Group controlId="exampleForm.ControlTextarea1" className="site-form__form-group">
                                             <Form.Label>Message:</Form.Label>
                                             <Form.Control as="textarea" rows="8" name="message" placeholder="Enter your message" onChange={handleChange} className={`site-form__textarea ${errors.message && touched.message ? 'site-form__input-error' : ''}`} id="input-message" value={values.message} />
@@ -312,12 +279,11 @@ class Contact extends Component {
                     </Space>
 
                 </section>
-
-     
             </div>
-        
-    )
-  }
+
+        )
+    }
+
 }
 
 export default Contact;
