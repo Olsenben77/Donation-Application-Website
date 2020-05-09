@@ -1,27 +1,25 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Security, SecureRoute, ImplicitCallback } from '@okta/okta-react';
-import Hero from './components/layout/Hero';
-import Navbar2 from './components/layout/Navbar2';
-import Home from './components/pages/Home';
-import Portal from './components/pages/Portal';
-import Staff from './components/pages/Staff';
-import Login from './components/auth/Login';
-import Layout from './components/layout/Layout';
-import About from './components/pages/About';
-import Footer from './components/pages/Footer';
-import Contact from './components/pages/Contact';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Security, SecureRoute, ImplicitCallback } from "@okta/okta-react";
+import Hero from "./components/layout/Hero";
+import Navbar2 from "./components/layout/Navbar2";
+import Home from "./components/pages/Home";
+import Portal from "./components/pages/Portal";
+import Charity from "./components/pages/Charity";
+import Search from "./components/pages/Search";
+import Saved from "./components/pages/Saved";
+import Staff from "./components/pages/Staff";
+import Login from "./components/auth/Login";
+import Layout from "./components/layout/Layout";
+import About from "./components/pages/About";
+import Footer from "./components/pages/Footer";
+import Contact from "./components/pages/Contact";
 
-
-
-
-
-
-import './App.css';
-import SearchNews from './components/pages/News';
+import "./App.css";
+import SearchNews from "./components/pages/News";
 
 function onAuthRequired({ history }) {
-  history.push('/login');
+  history.push("/login");
 }
 
 class App extends Component {
@@ -31,9 +29,8 @@ class App extends Component {
         <Security
           issuer="https://dev-240113.okta.com/oauth2/default"
           client_id="0oaad7oto4uSwXPVM4x6"
-          redirect_uri={window.location.origin + '/implicit/callback'}
+          redirect_uri={window.location.origin + "/implicit/callback"}
           onAuthRequired={onAuthRequired}
-
         >
           <div className="App">
             <Hero />
@@ -43,14 +40,15 @@ class App extends Component {
                 <Route path="/" exact={true} component={Home} />
                 <Route path="/about" exact={true} component={About} />
                 <Route path="/News" exact={true} component={SearchNews} />
+                <Route path="/Charity" exact={true} component={Charity} />
+                <Route path="/Search" exact={true} component={Search} />
+                <Route path="/Saved" exact={true} component={Saved} />
                 <Route path="/contact" exact={true} component={Contact} />
                 <Route path="/portal" exact={true} component={Portal} />
                 <SecureRoute path="/staff" exact={true} component={Staff} />
                 <Route
                   path="/login"
-                  render={() => (
-                    <Login baseUrl="https://dev-240113.okta.com" />
-                  )}
+                  render={() => <Login baseUrl="https://dev-240113.okta.com" />}
                 />
                 <Route path="/implicit/callback" component={ImplicitCallback} />
               </div>
