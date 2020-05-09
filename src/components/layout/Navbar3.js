@@ -74,7 +74,7 @@ class Navbar3 extends Component {
                             <Link
                                 onClick={this.toggleNav}
                                 className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
-                                to="/donate"
+                                to="/donateform"
                             >
                                 Donate
               </Link>
@@ -126,6 +126,14 @@ class Navbar3 extends Component {
                                     to="/staff"
                                     style={{ color: "black" }}
                                 >Portal</Link></NavDropdown.Item>
+                                <NavDropdown.Divider />
+                                <NavDropdown.Item to="/portal"><Link
+                                    onClick={this.toggleNav}
+                                    className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
+                                    to="/portal"
+                                    style={{ color: "black" }}
+                                >Logout</Link></NavDropdown.Item>
+
                             </NavDropdown>
                         </li>
 

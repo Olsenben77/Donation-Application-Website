@@ -55,11 +55,11 @@ export default withAuth(
       ) : (
           <div>
             <p className="lead">
-              To create a new User Account please <a href=" https://dev-240113.okta.com/" target="_blank"> click here! </a>
+              To create a new User Account please <a href=" https://dev-240113.okta.com/" target="_blank"> click here! (Create new account) </a>
             </p>
-            <p className="lead">If you are an active User please Sign in.</p>
+            <p className="lead">If you are an active member please login.</p>
             <button className="btn btn-success btn-lg" onClick={this.login}>
-              Sign in
+              Login
           </button>
           </div>
         );
