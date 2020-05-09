@@ -1,0 +1,13 @@
+.navbar {
+    border-radius: 0;
+    font-family: "Raleway";
+    color: "white";
+}
+
+.navbar-brand {
+    font-size: 24px;
+}
+
+.nav-item {
+    font-size: 18px
+}
