@@ -7,20 +7,34 @@ var infoWindow;
 var marker;
 var place;
 var markers = [];
+
 function callback (results, status) {
+    
     function clearMarkers() {
         for (var i = 0; i < markers.length; i++) {
           if (markers[i]) {
             markers[i].setMap(null);
           }
         }
+       
         markers = [];
+        
+
       }
     clearMarkers();
+    clearResults();
     if (status == window.google.maps.places.PlacesServiceStatus.OK)
     for (var i = 0; i < results.length; i++) {
         createMarker(results[i], i);
     }
+
+    function clearResults() {
+        var results = document.getElementById('results');
+        while (results.childNodes[0]) {
+          results.removeChild(results.childNodes[0]);
+        }
+      }
+
 }
 function createMarker (place, i) {
     markers[i] = new window.google.maps.Marker({
@@ -28,19 +42,22 @@ function createMarker (place, i) {
         position: place.geometry.location
     });
     window.google.maps.event.addListener(markers[i], 'click', function() {
-        infoWindow.setContent(place.name + "<br>" + place.formatted_address );
+        infoWindow.setContent(place.name + "<br>" + place.formatted_address + "<br>" + place.formatted_phone_number);
         infoWindow.open(map, this);
     });
+    
     var results = document.getElementById('results');
     var tr = document.createElement('tr');
+    results.appendChild(tr);
     tr.style.backgroundColor = (i % 2 === 0 ? '#F0F0F0' : '#FFFFFF');
     var nameTd = document.createElement('td');
     var name = document.createTextNode(place.name);
     nameTd.appendChild(name);
     tr.appendChild(nameTd);
-    results.appendChild(tr);
+    
     tr.onclick = function() {
         window.google.maps.event.trigger(markers[i], 'click');
+
       };
     }
 function getCharitiesSearch () {
