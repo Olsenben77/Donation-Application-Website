@@ -15,6 +15,8 @@ import Contact from './components/pages/Contact';
 import Charity from './components/pages/Charity';
 import Search from './components/pages/Search';
 import Saved from './components/pages/Saved';
+import DonateForm from './components/pages/DonateForm';
+import Donate from './components/pages/Donate';
 
 import "./App.css";
 import SearchNews from "./components/pages/News";
@@ -40,6 +42,8 @@ class App extends Component {
               <div>
                 <Route path="/" exact={true} component={Home} />
                 <Route path="/about" exact={true} component={About} />
+                <Route path="/donateform" exact={true} component={DonateForm} />
+                <Route path="/donate" exact={true} component={Donate} />
                 <Route path="/News" exact={true} component={SearchNews} />
                 <Route path="/Charity" exact={true} component={Charity} />
                 <Route path="/Search" exact={true} component={Search} />

@@ -80,3 +80,11 @@
 .contact_icon {
     padding-right: 20px;
 }
+
+/* Donation page */
+
+#donate_grid {
+    text-align: left;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
