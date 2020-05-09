@@ -80,12 +80,6 @@ class Maps extends Component {
 
     }
     
-     //callback function
-    
-
-   
-    
-    
 
     getCharitiesGeolocation () {
         var service = new window.google.maps.places.PlacesService(map);
@@ -181,18 +175,18 @@ class Maps extends Component {
     render () {
         return (
             <div>
-            <div id ="fakebox">
-            <input id= "search"/>
-            <button onClick={this.geoClicker}id="geoButton">Geolocation</button>
+                <div id ="fakebox">
+                <input id= "search"/>
+                <button onClick={this.geoClicker}id="geoButton">Geolocation</button>
             </div>
             
             <div ref={this.googleMap}id="map"></div>
             
             <div id="listing">
-            <table id="resultsTable">
-            <tbody id="results"></tbody>
-            </table>
-            </div>
+                <table id="resultsTable">
+                <tbody id="results"></tbody>
+                </table>
+                </div>
             </div>
             )
         };
