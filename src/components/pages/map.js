@@ -8,6 +8,15 @@ var marker;
 var place;
 var markers = [];
 function callback (results, status) {
+    function clearMarkers() {
+        for (var i = 0; i < markers.length; i++) {
+          if (markers[i]) {
+            markers[i].setMap(null);
+          }
+        }
+        markers = [];
+      }
+    clearMarkers();
     if (status == window.google.maps.places.PlacesServiceStatus.OK)
     for (var i = 0; i < results.length; i++) {
         createMarker(results[i], i);
