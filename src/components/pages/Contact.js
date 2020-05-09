@@ -121,7 +121,7 @@ class Contact extends Component {
 
               <div className="col-lg-2 col-md-6">
                 <span className="service-icon rounded-circle mx-auto mb-3">
-                  <a href="https://ben-react-portfolio-v2.herokuapp.com/" target="blank_"><img src={Jared} style={{ width: "150px", height: "150px" }} alt="Jared Kong" id="contact_photo"></img></a>
+                  <a href="https://github.com/jaredKong" target="blank_"><img src={Jared} style={{ width: "150px", height: "150px" }} alt="Jared Kong" id="contact_photo"></img></a>
                 </span>
                 <h4>
                   <strong>Jared Kong</strong>
