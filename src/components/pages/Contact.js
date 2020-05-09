@@ -36,7 +36,7 @@ class Contact extends Component {
       isSending: true
     })
     axios.post(
-      "https://formcarry.com/s/pDNgV7JpwdC5",
+      "https://formcarry.com/s/AcKwMfI0r0RW",
       values,
       { headers: { "Accept": "application/json" } }
     )
@@ -147,6 +147,8 @@ class Contact extends Component {
               initialValues={{
                 name: '',
                 email: '',
+                title: '',
+                location: '',
                 subject: '',
                 message: ''
               }}
@@ -156,10 +158,16 @@ class Contact extends Component {
                   errors.name = 'Name is required';
                 }
                 if (!values.subject) {
-                  errors.name = 'Subject is required';
+                  errors.subject = 'Subject is required';
                 }
                 if (!values.email) {
                   errors.email = 'Email is required';
+                }
+                if (!values.title) {
+                  errors.title = 'Title is required';
+                }
+                if (!values.location) {
+                  errors.location = 'Location is required';
                 }
                 if (!values.message) {
                   errors.message = 'Message is required';
@@ -169,6 +177,8 @@ class Contact extends Component {
               validationSchema={Yup.object().shape({
                 name: Yup.string().required(),
                 email: Yup.string().email().required(),
+                title: Yup.string().required(),
+                location: Yup.string().required(),
                 subject: Yup.string().required(),
                 message: Yup.string().required()
               })}
@@ -202,6 +212,31 @@ class Contact extends Component {
                             <div className="site-form__error"> {errors.email} </div>
                           }
                         </Form.Group>
+                      </Col>
+                    </Form.Row>
+
+                    <Form.Row>
+                      <Col>
+                        <Form.Group controlId="formGroupText" className="site-form__form-group">
+                          <Form.Label htmlFor="input-name" className="site-form__label">Title</Form.Label>
+                          <Form.Control placeholder="title/ company" type="text" name="title" onBlur={handleBlur} onChange={handleChange} className={`site-form__input ${errors.title && touched.title ? 'site-form__input-error' : ''}`} id="input-name" value={values.title} />
+                          {
+                            errors.title && touched.title &&
+                            <div className="site-form__error"> {errors.title} </div>
+                          }
+                        </Form.Group>
+
+                      </Col>
+                      <Col>
+                        <Form.Group controlId="formGroupText" className="site-form__form-group">
+                          <Form.Label htmlFor="input-name" className="site-form__label">Location:</Form.Label>
+                          <Form.Control placeholder="location" type="text" name="location" onBlur={handleBlur} onChange={handleChange} className={`site-form__input ${errors.location && touched.location ? 'site-form__input-error' : ''}`} id="input-name" value={values.location} />
+                          {
+                            errors.location && touched.location &&
+                            <div className="site-form__error"> {errors.location} </div>
+                          }
+                        </Form.Group>
+
                       </Col>
                     </Form.Row>
 
