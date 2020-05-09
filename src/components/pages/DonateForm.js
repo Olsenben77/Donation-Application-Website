@@ -75,7 +75,7 @@ class DonateForm extends Component {
                         <Form.Check type="checkbox" label="I read the Disclosure and Agreed to the Terms" />
                     </Form.Group>
 
-                    <Button variant="outline-primary" type="submit">
+                    <Button variant="outline-dark" type="submit">
                         <Link
                             onClick={this.toggleNav}
                             className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
