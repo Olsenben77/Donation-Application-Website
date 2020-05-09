@@ -80,7 +80,7 @@ Project is created with:
 
 ## UML
 
-- ![UML](public/assets/img/UML.png)
+- ![UML](https://app.diagrams.net/#G1Ef64p8WggBs6HHD4BtYlJ4aql8GPUpMv)
 
 ## Database
 
