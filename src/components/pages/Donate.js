@@ -1,7 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-import { Card, CardTitle, CardText } from 'reactstrap';
-
 import Image from '../images/blacklogo.png';
 
 

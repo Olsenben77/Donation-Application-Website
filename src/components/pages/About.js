@@ -2,8 +2,6 @@ import React, { useEffect } from "react";
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
 import "../../index.css";
-
-import Image from '../images/kids.jpg';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import './style.css';
@@ -28,7 +26,7 @@ const About = () => {
             <div className="about-div">
                 <div data-aos="fade-left" id="normal">
 
-                    <h1 style={{ fontWeight: "900" }}> DONATIONALLY... </h1>
+                    <h1 style={{ fontWeight: "900" }}> ... OUR MISSION ... </h1>
                     <h4> Our mission is to create lasting change one donation at a time.</h4>
                 </div>
 
@@ -53,7 +51,7 @@ const About = () => {
 
                 <div data-aos="fade-up">
 
-                    <h1 style={{ fontWeight: "900" }} className="normal">CORE VALUES...</h1>
+                    <h1 style={{ fontWeight: "900" }} className="normal">... CORE VALUES ...</h1>
                 </div>
                 <div className="boxes" style={{ backgroundColor: "#C06C84" }}>
                     <Container fluid>

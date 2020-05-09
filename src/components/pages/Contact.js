@@ -2,9 +2,7 @@ import React, { Component, Fragment } from 'react';
 import axios from "axios";
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { Form, Button, Col, Row } from 'react-bootstrap';
-import { Space } from 'antd';
-import { FacebookOutlined, MessageOutlined, TwitterOutlined, InstagramOutlined, LinkedinOutlined, MoreOutlined, CopyrightCircleOutlined } from '@ant-design/icons';
+import { Form, Button, Col } from 'react-bootstrap';
 import Icon from '../images/original_trans.png';
 import Lloyd from '../images/lloyd2.png';
 import Owen from '../images/Owen.png';
@@ -75,7 +73,7 @@ class Contact extends Component {
             <div className="row">
               <div className="col-lg-2 col-md-6 mb-5 mb-lg-0">
                 <span className="service-icon rounded-circle mx-auto mb-3">
-                  <img src={Icon} style={{ width: "250px", height: "175px" }} id="contact_photo" ></img>
+                  <img src={Icon} alt="" style={{ width: "250px", height: "175px" }} id="contact_photo" ></img>
                 </span>
 
               </div>
