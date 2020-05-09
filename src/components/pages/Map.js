@@ -1,4 +1,6 @@
 import React,{Component} from 'react';
+
+
 var map;
 var input;
 var searchBox;
@@ -42,7 +44,7 @@ function createMarker (place, i) {
         position: place.geometry.location
     });
     window.google.maps.event.addListener(markers[i], 'click', function() {
-        infoWindow.setContent(place.name + "<br>" + place.formatted_address + "<br>" + place.formatted_phone_number);
+        infoWindow.setContent(place.name + "<br>" + place.formatted_address);
         infoWindow.open(map, this);
     });
     
@@ -142,7 +144,7 @@ class Maps extends Component {
         }); 
         input = document.getElementById('search');
         searchBox = new window.google.maps.places.SearchBox(input);
-        map.controls[window.google.maps.ControlPosition.TOP_CENTER].push(input);
+        // map.controls[window.google.maps.ControlPosition.TOP_CENTER].push(input);
         map.addListener('bounds_changed', function() {
             searchBox.setBounds(map.getBounds());
         });
@@ -170,7 +172,9 @@ class Maps extends Component {
             <div>
                 <div>
                     <input id= "search"/>
-                    <button onClick={this.geoClicker}id="geoButton">Geolocation</button>
+                    <button class="btn btn-primary" onClick={this.geoClicker}id="geoButton">
+                    <i class="far fa-location"></i>
+                    Use Current location</button>
                 </div>
                 <div ref={this.googleMap}id="map"></div>
                 <div id="listing">
