@@ -59,11 +59,15 @@ The Contact Us page provides personal information / photos about the creators an
 
 ![Okta](github/People.PNG)
 
-- You can give permissions to your team or users. You can also add multifactor authentication to your application. For the Donationally project, an email authentication is use to authenticate the validity of the user. 
+- You can give permissions, lock/ unlock accounts, activate/ deactivate, suspend or upload the user's info on a CVS file. You can also add multifactor authentication to your application (ie. email authention, text or phone call authentication, multiple questions authentication, etc.). For the Donationally project, an email authentication is use to authenticate the validity of the user. 
 
 ![Okta](github/logs.PNG)
 
+- System logs shows counts of events overtime on how much user logs in and the IP of the user during the event.
+
 ![Okta](github/email.PNG)
+
+- Okta can be customized.
 
 
 ## User Story
