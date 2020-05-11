@@ -55,10 +55,11 @@ The Contact Us page provides personal information / photos about the creators an
 
 ![Okta](github/dashboard.PNG)
 
-- Okta works with multiple front and backend languages. 
-
+- Okta works with multiple front and backend languages. The system log provides information on who sign-up, logs-in to you application. 
 
 ![Okta](github/People.PNG)
+
+- You can give permissions to your team or users. You can also add multifactor authentication to your application. For the Donationally project, an email authentication is use to authenticate the validity of the user. 
 
 ![Okta](github/logs.PNG)
 
