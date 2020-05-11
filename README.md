@@ -45,8 +45,8 @@ The Contact Us page provides personal information / photos about the creators an
 # Functionality
 ### Log-in
 
-<a href="https://drive.google.com/file/d/1LEpG53CKeT1lrhyuuSYG86J6M2guJRFw/view"> ![Okta](github/login.PNG) </a>
-- View the video on how the log in system (authentication) works for Donationally.com
+<a href="https://drive.google.com/file/d/1LEpG53CKeT1lrhyuuSYG86J6M2guJRFw/view" taget="blank_"> ![Okta](github/login.PNG) </a>
+- Click on the video above for steps on how the log in system (authentication) works for Donationally.com
 
 #### Purpose
 - To build a Custom Authentication Experience for Your Application
