@@ -97,7 +97,7 @@ Project is created with:
 
 ## Bugs And Feature Requests
 
-Have a bug or a feature request? Please contact us at "donationally@gmail.org"
+Have a bug or a feature request? Please contact us at "donationally@gmail.com"
 
 ## Authors
 
