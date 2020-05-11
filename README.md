@@ -44,6 +44,10 @@ The Contact Us page provides personal information / photos about the creators an
 
 # Functionality
 ### Log-in
+
+<a href="https://drive.google.com/file/d/1LEpG53CKeT1lrhyuuSYG86J6M2guJRFw/view"> ![Okta](github/login.PNG) </a>
+- View the video on how the log in system (authentication) works for Donationally.com
+
 #### Purpose
 - To build a Custom Authentication Experience for Your Application
 - Authentication is a crucial part in developing any application. Whether you are developing an internal IT app for your employees, building a portal for your partners, or exposing a set of APIs for developers building apps around your resources, Okta provides the right authentication support for your projects.
