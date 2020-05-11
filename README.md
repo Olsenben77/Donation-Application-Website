@@ -3,6 +3,7 @@
 ## Table of contents
 
 - [Application Interface](#Application-Interface)
+- [Functionality](#Functionality)
 - [User Story](#User-Story)
 - [General Info](#General-Info)
 - [Deployment](#Deployment)
@@ -40,6 +41,29 @@ The Donate page includes a charity search bar, and custom buttons allowing the u
 The Contact Us page provides personal information / photos about the creators and founders of Donationally.com. There is also a "Review" section where users can ask questions or give comments.
 
 ![Contact](src/components/images/Contactus.png)
+
+# Functionality
+### Log-in
+#### Purpose
+- To build a Custom Authentication Experience for Your Application
+- Authentication is a crucial part in developing any application. Whether you are developing an internal IT app for your employees, building a portal for your partners, or exposing a set of APIs for developers building apps around your resources, Okta provides the right authentication support for your projects.
+
+- The sign-in experience is one of the most important user experiences any app developer needs to consider. To provide a seamless and attractive, yet secure authentication experience is not a trivial task. Typically, the sign-in logic accompanies other features such as password reset and registration. More importantly, enhanced security in the form of strong and adaptive authentication during the sign-in process is often critical to many implementations.
+
+#### Why use OKLA?
+- Okta provides many options for developers to handle the authentication experience that are built on top of the underlying feature set in Okta. Password policies, strong and adaptive authentication policies, and password reset workflow can all be configured easily in the administrator UI. Many of these policies can also be controlled through Okta's API.
+
+![Okta](github/dashboard.PNG)
+
+- Okta works with multiple front and backend languages. 
+
+
+![Okta](github/People.PNG)
+
+![Okta](github/logs.PNG)
+
+![Okta](github/email.PNG)
+
 
 ## User Story
 
