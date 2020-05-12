@@ -48,7 +48,7 @@ The Contact Us page provides personal information / photos about the creators an
 #### How to create a new user account at Donationally.com
 
 <a href="https://drive.google.com/file/d/1LEpG53CKeT1lrhyuuSYG86J6M2guJRFw/view" taget="blank_"> ![Okta](github/login.PNG) </a>
-- Click on the video above for steps on how the log in system (authentication) works for Donationally.com
+- Click on the video above for steps on how create a new user account with authentication at Donationally.com
 
 #### How to reset my password at Donationally.com
 
