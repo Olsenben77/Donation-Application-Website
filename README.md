@@ -99,7 +99,10 @@ SO THAT I can give back to those in need
 -In your terminal, cd to "Donation-App---Project-3" folder and npm install all of the dependencies
 -In terminal run using "npm run start"
 -Local browser website will be: localhost:3000
--Additionally, the website is available on Heroku at:
+-Additionally, the website (testing phase only) is available on Heroku at: https://ancient-mountain-46633.herokuapp.com/
+
+### Domain 
+- Domain was provided by Go Daddy: https://donationally.com (the webiste is under construction)
 
 ## Technologies
 
