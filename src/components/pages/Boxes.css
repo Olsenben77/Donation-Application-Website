@@ -52,37 +52,37 @@
 }
 
 @media (min-width: 1200px) {
-    .container, .container-lg, .container-md, .container-sm, .container-xl {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .boxes, .boxes2 {
         max-width: 100%;
     }
 }
 
 @media (min-width: 992px) {
-    .container, .container-lg, .container-md, .container-sm, .container-xl {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .boxes, .boxes2 {
         max-width: 100%;
     }
 }
 
 @media (min-width: 768px) {
-    .container, .container-lg, .container-md, .container-sm, .container-xl {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .boxes, .boxes2 {
         max-width: 100%;
     }
 }
 
 @media (min-width: 576px) {
-    .container, .container-lg, .container-md, .container-sm, .container-xl {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .boxes, .boxes2 {
         max-width: 100%;
     }
 }
 
 @media (min-width: 400px) {
-    .container, .container-lg, .container-md, .container-sm, .container-xl {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .boxes, .boxes2 {
         max-width: 100%;
     }
 }
 
 @media (min-width: 200px) {
-    .container, .container-lg, .container-md, .container-sm, .container-xl {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .boxes, .boxes2 {
         max-width: 100%;
     }
 }
