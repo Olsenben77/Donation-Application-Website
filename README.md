@@ -3,6 +3,7 @@
 ## Table of contents
 
 - [Application Interface](#Application-Interface)
+- [Functionality](#Functionality)
 - [User Story](#User-Story)
 - [General Info](#General-Info)
 - [Deployment](#Deployment)
@@ -41,6 +42,45 @@ The Contact Us page provides personal information / photos about the creators an
 
 ![Contact](src/components/images/Contactus.png)
 
+# Functionality
+### Log-in System
+
+#### How to create a new user account at Donationally.com
+
+<a href="https://drive.google.com/file/d/1LEpG53CKeT1lrhyuuSYG86J6M2guJRFw/view" taget="blank_"> ![Okta](github/login.PNG) </a>
+- Click on the video above for steps on how create a new user account with authentication at Donationally.com
+
+#### How to reset my password at Donationally.com
+
+ ![Okta](github/reset.PNG) 
+
+
+#### Purpose
+- To build a Custom Authentication Experience for Your Application
+- Authentication is a crucial part in developing any application. Whether you are developing an internal IT app for your employees, building a portal for your partners, or exposing a set of APIs for developers building apps around your resources, Okta provides the right authentication support for your projects.
+
+- The sign-in experience is one of the most important user experiences any app developer needs to consider. To provide a seamless and attractive, yet secure authentication experience is not a trivial task. Typically, the sign-in logic accompanies other features such as password reset and registration. More importantly, enhanced security in the form of strong and adaptive authentication during the sign-in process is often critical to many implementations.
+
+#### Why use OKLA?
+- Okta provides many options for developers to handle the authentication experience that are built on top of the underlying feature set in Okta. Password policies, strong and adaptive authentication policies, and password reset workflow can all be configured easily in the administrator UI. Many of these policies can also be controlled through Okta's API.
+
+![Okta](github/dashboard.PNG)
+
+- Okta works with multiple front and backend languages. The system log provides information on who sign-up, logs-in to you application. 
+
+![Okta](github/People.PNG)
+
+- You can give permissions, lock/ unlock accounts, activate/ deactivate, suspend or upload the user's info on a CVS file. You can also add multifactor authentication to your application (ie. email authention, text or phone call authentication, multiple questions authentication, etc.). For the Donationally project, an email authentication is use to authenticate the validity of the user. 
+
+![Okta](github/logs.PNG)
+
+- System logs shows counts of events overtime on how much user logs in and the IP of the user during the event.
+
+![Okta](github/email.PNG)
+
+- Okta can be customized.
+
+
 ## User Story
 
 AS A philanthropist
@@ -59,7 +99,10 @@ SO THAT I can give back to those in need
 -In your terminal, cd to "Donation-App---Project-3" folder and npm install all of the dependencies
 -In terminal run using "npm run start"
 -Local browser website will be: localhost:3000
--Additionally, the website is available on Heroku at:
+-Additionally, the website (testing phase only) is available on Heroku at: https://ancient-mountain-46633.herokuapp.com/
+
+### Domain 
+- Domain was provided by Go Daddy: https://donationally.com (the webiste is under construction)
 
 ## Technologies
 
@@ -97,7 +140,7 @@ Project is created with:
 
 ## Bugs And Feature Requests
 
-Have a bug or a feature request? Please contact us at "donationally@gmail.org"
+Have a bug or a feature request? Please contact us at "donationally@gmail.com"
 
 ## Authors
 
