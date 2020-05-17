@@ -18,25 +18,39 @@
     margin-top: 40px;
 }
 
-.home_background1 {
-    background-color: white;
+/* Home page */
+
+.only {
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
 }
 
-.home_background2 {
-    background-color: #B09A70;
+.responsive_div {
+    padding: 0;
 }
 
-.home_background3 {
-    background-color: white;
+#responsive_h1 {
+    font-size: 3vw;
 }
 
-.home_background4 {
-    background-color: #163d26;
+#responsive_h7 {
+    text-align: center;
+    font-size: 1vw;
 }
 
 .page_inner_div {
     padding-left: 15%;
     padding-right: 15%;
+}
+
+#intro_h1 {
+    font-size: 3vw;
+}
+
+#intro_h7 {
+    text-align: center;
+    font-size: 1vw;
 }
 
 /* contact page*/
@@ -87,4 +101,92 @@
     text-align: left;
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+@media (min-width: 1200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .boxes, .boxes2 {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .boxes, .boxes2, p {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .boxes, .boxes2, p {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 576px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .boxes, .boxes2, p {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .boxes, .boxes2 {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 200px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .boxes, .boxes2 {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 992px) {
+    #responsive_h1 {
+        font-size: 4vw;
+    }
+    #responsive_h7 {
+        font-size: 1.5vw;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    #responsive_h1 {
+        font-size: 5vw;
+    }
+    #responsive_h7 {
+        font-size: 2vw;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    #responsive_h1 {
+        font-size: 7vw;
+    }
+    #responsive_h7 {
+        font-size: 3vw;
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    #responsive_h1 {
+        font-size: 8vw;
+    }
+    #responsive_h7 {
+        text-align: center;
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 200px) {
+    #responsive_h1 {
+        font-size: 8vw;
+    }
+    #responsive_h7 {
+        text-align: center;
+        font-size: 4vw;
+    }
 }
