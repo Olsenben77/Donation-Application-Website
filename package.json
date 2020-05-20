@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "homepage": ".",
+  "engines": {
+    "node": "12.13.0",
+    "npm": "6.12.0"
+  },
   "dependencies": {
     "@ant-design/icons": "^4.1.0",
     "@okta/okta-react": "^1.4.1",
