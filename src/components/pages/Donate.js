@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Button } from 'react-bootstrap';
 
 import Image from '../images/blacklogo.png';
+import './style.css'
 
 
 
@@ -69,23 +71,18 @@ function Donate() {
                 </div>
             ) : (
                     <div>
-                        <h1>
-                            {product.descripttion} for ${product.price}
-                        </h1>
+                        <div className="inner_page_div" style={{ paddingTop: "30px" }}>
+                            <h1 id="responsive_h1">Please help us jump start our non-profit organization by donating to our go fund me</h1>
+                            <Button variant="info" href="https://www.gofundme.com/f/donationally?=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1">GoFundme</Button>
+                            <h3 style={{ paddingTop: "20px" }}>This page is under construction. The PayPal payment below is on testing mode (not live)</h3>
 
+                            <h3 style={{ paddingTop: "20px" }}> Paypal buttons are on test mode!
+                            ({product.descripttion} for ${product.price}).
+                        </h3>
+                        </div>
                         <div ref={v => (paypalRef = v)} id="format" />
 
-                        <br></br>
-                        <br></br>
-                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                            <input type="hidden" name="cmd" value="_s-xclick" />
-                            <input type="hidden" name="hosted_button_id" value="654H28S2UVASC" />
 
-                            <br></br>
-                            <br></br>
-                            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-                        </form>
 
 
                     </div>

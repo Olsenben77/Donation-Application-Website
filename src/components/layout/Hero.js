@@ -34,7 +34,7 @@ function Hero() {
           data-track-action="navbar"
           data-track-label="logo"
           href="/"
-          title="Free Stock Photos"
+          title="Donationally"
         >
           <div class="main-nav-bar__logo__img">
             <svg

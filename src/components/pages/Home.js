@@ -34,6 +34,10 @@ const Home = (props) => {
             is a non-profit charity search and donation
             application, helping users in multiple ways to stay informed about
             world events and opportunities to give back to those in need. </h7>
+          <br></br>
+          <h7 style={{ color: "#66615b", paddingBottom: "20px", fontStyle: "Italic" }} id="responsive_h7" data-aos="fade-right" data-aos-delay="100">
+            Please help us start our non-profit organization by donating to our GoFundme </h7>
+          <Button variant="outline-secondary" href="https://www.gofundme.com/f/donationally?=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1">GoFundme</Button>{' '}
           <div className="row" style={{ paddingTop: "70px" }}>
             <div className="col-md-6" data-aos="fade-right" data-aos-delay="100">
               <img src={HeartHand} style={{ border: "10px solid white" }} fluid className="only" />
@@ -157,11 +161,9 @@ const Home = (props) => {
 
         <div className="page_inner_div">
           <h1 id="responsive_h1" style={{ fontWeight: "900", color: "#263238" }}>Donate now!</h1>
-          <p id="responsive_h7" style={{ fontSize: "20px", color: "white", marginBottom: "0px" }}>
-            Discover a variety of worldwide charities using the Charity Map.
-            This process will geolocate by user to encourage local donation
-            opportunities. You can also type in a custom area around the globe
-            to find organizations that need assistance.</p>
+          <p id="responsive_h7" style={{ fontSize: "20px", color: "white", marginBottom: "0px", paddingBottom: "20px" }}>Please help us start our non-profit organization by donating to our GoFundme</p>
+          <Button variant="outline-secondary" href="https://www.gofundme.com/f/donationally?=customer&utm_medium=copy_link&utm_campaign=p_cf+share-flow-1">GoFundme</Button>{' '}
+
         </div>
 
       </div>
