@@ -26,7 +26,7 @@ class DonateForm extends Component {
     render() {
         return (
             <div className="page_inner_div" id="donate_grid">
-                <h1 style={{ fontWeight: "900", textAlign: "center" }}>Please fill in the form and read the Disclosure Agreement</h1>
+                <h1 style={{ fontWeight: "900", textAlign: "center" }}>This section is on TESTING MODE ONLY!</h1>
                 <Form>
                     <Form.Row>
                         <Form.Group as={Col} controlId="formName">
