@@ -13,7 +13,7 @@
     "@okta/okta-signin-widget": "^3.9.2",
     "antd": "^4.2.0",
     "aos": "^2.3.4",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.4.1",
     "formik": "^2.1.4",
     "mongoose": "^5.9.13",
